@@ -30,7 +30,7 @@
                     <Icon name="material-symbols:edit-square-outline-rounded" size="30" color="#ffffff"/>
                 </button>
 
-                <button @click="userStore.isMenuOverlay = true" class="w-full h-full">
+                <button @click="userStore.isLogoutOverlay = true" class="w-full h-full">
                     <Icon name="material-symbols:logout" size="30" color="#ffffff"/>
                 </button>
             </div>
