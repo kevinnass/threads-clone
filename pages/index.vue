@@ -1,4 +1,5 @@
 <template>
+    <!-- <div class="text-white">{{ user }}</div> -->
     <MainLayout>
         <div id="indexPage" class="text-white w-full overflow-auto">
             <div class="mx-auto max-w-[500px] overflow-hidde">
@@ -17,11 +18,17 @@ import MainLayout from '~/layouts/MainLayout.vue';
 import { useUserStore } from '../stores/user';
 
 const userStore = useUserStore();
-// const user = useSupabaseUser();
+const user = useSupabaseUser();
 
 let posts = ref([]);
 let isPosts = ref(true);
 let isLoading = ref(false);
+
+watchEffect(() => {
+    if (!user.value) {
+        return navigateTo('/auth')
+    }
+})
 
 onBeforeMount(() => {
     posts.value = [

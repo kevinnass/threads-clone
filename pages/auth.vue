@@ -10,7 +10,7 @@
 
                 <div class="text-center mb-6 mt-4">Login / Register</div>
 
-                <button 
+                <button
                     @click="login('github')"
                     class="flex 
                         items-center 
@@ -35,21 +35,22 @@
 </template>
 
 <script setup>
-// const client = useSupabaseClient();
-// const user = useSupabaseUser();
+const client = useSupabaseClient();
+const user = useSupabaseUser();
 
-// watchEffect(() => {
-//     if (user.value) {
-//         return navigateTo('/')
-//     }
-// })
+watchEffect(() => {
+    if (user.value) {
+        console.log("user: ", user.value);
+        return navigateTo('/')
+    }
+})
 
-// const login = async (prov) => {
-//   const { data, error } = await client.auth.signInWithOAuth({
-//     provider: prov,
-//     redirectTo: window.location.origin
-//   })
+const login = async (prov) => {
+  const { data, error } = await client.auth.signInWithOAuth({
+    provider: prov,
+    redirectTo: window.location.origin
+  })
 
-//   if (error) console.log(error)
-// }
+  if (error) console.log(error)
+}
 </script>
