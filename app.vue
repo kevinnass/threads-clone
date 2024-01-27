@@ -1,4 +1,5 @@
 <template>
+  <VitePwaManifest />
   <div class="fixed bg-black w-[calc(100%+1px)] h-full">
     <NuxtPage />
 
