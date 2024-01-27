@@ -41,7 +41,7 @@ const user = useSupabaseUser();
 watchEffect(() => {
     if (user.value) {
         console.log("user: ", user.value);
-        return navigateTo('/')
+        return navigateTo('/');
     }
 })
 
@@ -53,4 +53,9 @@ const login = async (prov) => {
 
   if (error) console.log(error)
 }
+
+if (typeof window !== 'undefined') {
+    localStorage.setItem('user:', JSON.stringify(user));
+}
+
 </script>
