@@ -41,7 +41,7 @@ const user = useSupabaseUser();
 watchEffect(() => {
     if (user.value) {
         console.log("user: ", user.value);
-        return navigateTo('https://threads-clone-al4jzo02g-kevinnass.vercel.app/');
+        return navigateTo('https://threads-clone-al4jzo02g-kevinnass.vercel.app/', {external: true});
     }
 })
 

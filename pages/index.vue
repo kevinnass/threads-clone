@@ -37,14 +37,14 @@ import { useUserStore } from '~/stores/user';
 const userStore = useUserStore();
 const user = useSupabaseUser();
 
-let posts = ref([])
-let isPosts = ref(false)
-let isLoading = ref(false)
+let posts = ref([]);
+let isPosts = ref(false);
+let isLoading = ref(false);
 
 watchEffect(() => {
     if (!user.value) {
-        console.log('user: ',user)
-        return navigateTo('https://threads-clone-al4jzo02g-kevinnass.vercel.app/auth')
+        console.log('user: ',user);
+        return navigateTo('https://threads-clone-al4jzo02g-kevinnass.vercel.app/auth', {external: true})
     }
 })
 
