@@ -41,14 +41,14 @@ const user = useSupabaseUser();
 watchEffect(() => {
     if (user.value) {
         console.log("user: ", user.value);
-        return navigateTo('/');
+        return navigateTo('https://threads-clone-al4jzo02g-kevinnass.vercel.app/');
     }
 })
 
 const login = async (prov) => {
   const { data, error } = await client.auth.signInWithOAuth({
     provider: prov,
-    redirectTo: '/'
+    redirectTo: 'https://threads-clone-al4jzo02g-kevinnass.vercel.app/'
   });
 
   if (error) console.log(error)
@@ -57,5 +57,4 @@ const login = async (prov) => {
 if (typeof window !== 'undefined') {
     localStorage.setItem('user:', JSON.stringify(user));
 }
-
 </script>
