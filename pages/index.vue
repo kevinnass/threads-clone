@@ -43,8 +43,8 @@ let isLoading = ref(false);
 
 watchEffect(() => {
     if (!user.value) {
-        console.log('user: ',user);
-        return navigateTo('https://threads-clone-al4jzo02g-kevinnass.vercel.app/auth', {external: true})
+        console.log('user: ',user)
+        return navigateTo('/auth')
     }
 })
 
