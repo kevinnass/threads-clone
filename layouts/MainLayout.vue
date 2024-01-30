@@ -5,12 +5,31 @@
             <div id="TopMenu" class="w-full flex items-center justify-center px-2 h-10 my-2">
                 <img class="w-[35px]" src="/public/threads-logo.png" alt="">
             </div>
+            <div v-if="!user" class="text-white w-full flex items-center justify-center">
+                <button
+                    @click="navigateTo('/auth')"
+                    class="flex 
+                        items-center 
+                        justify-center 
+                        gap-3
+                        p-1.5
+                        w-1/2
+                        border 
+                        rounded-full
+                        text-lg
+                        font-semibold"
+                >
+                    <div class="flex items-center gap-2 justify-center">
+                        Login
+                    </div>
+                </button>
+            </div>
         </div>
     <!-- Logo at the top -->
 
     <!-- Body -->
 
-        <div class="flex w-full max-w-[500px] mx-auto h-full">
+        <div class="flex w-full mt-6 max-w-[500px] mx-auto h-full">
             <slot />
         </div>
     <!-- Body -->
@@ -45,5 +64,6 @@ import { navigateTo } from 'nuxt/app';
 import { useUserStore } from '~/stores/user';
 
 const userStore = useUserStore();
+const user = useSupabaseUser();
 
 </script>

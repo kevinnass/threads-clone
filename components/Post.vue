@@ -1,10 +1,7 @@
-
-import type { Icon } from '#build/components';
 <template>
     <div class="z-50 bottom-0 h-full w-full">
         <div class="py-2 w-full">
-            <div class="flex items-center justify-between">
-
+            <div class="text-white flex items-center justify-between">
                 <div class="flex items-center text-white">
                     <img :src="post.image" class="rounded-full h-[35px]">
                     <div class="ml-2 font-semibold text-[18px]">{{ post.name }}</div>
@@ -109,6 +106,7 @@ const runtimeConfig = useRuntimeConfig();
 
 const client = useSupabaseClient();
 const user = useSupabaseUser();
+
 
 let isMenu = ref(false);
 let isLike = ref(false);
