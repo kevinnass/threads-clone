@@ -3,7 +3,7 @@ import { defineStore } from 'pinia';
 export const useUserStore = defineStore('user', {
     state: () => ({
         posts: [],
-        appUrl: 'https://threads-clone-five-eta.vercel.app/',
+        // appUrl: 'https://threads-clone-five-eta.vercel.app/',
         isMenuOverlay: false,
         isLogoutOverlay: false,
     }),

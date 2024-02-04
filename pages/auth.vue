@@ -12,13 +12,13 @@
 
                 <button
                     @click="login('github')"
-                    class="flex 
-                        items-center 
-                        justify-center 
+                    class="flex
+                        items-center
+                        justify-center
                         gap-3
                         p-1.5
                         w-full
-                        border 
+                        border
                         rounded-full
                         text-lg
                         font-semibold"

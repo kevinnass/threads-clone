@@ -170,7 +170,7 @@ const unlikePost = async (id) => {
     try {
         await useFetch(`/api/unlike-post/${id}`, { method: 'DELETE' })
         await userStore.getAllPosts()
-        isLike.value = false
+        isLike.value = false;
     } catch (error) {
         console.log(error)
         isLike.value = false

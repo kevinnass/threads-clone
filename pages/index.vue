@@ -51,7 +51,7 @@ watchEffect(() => {
 onBeforeMount(async () => {
     try {
         isLoading.value = true
-        await userStore.getAllPosts()
+        await userStore.getAllPosts();
         isLoading.value = false
     } catch (error) {
         console.log(error)
