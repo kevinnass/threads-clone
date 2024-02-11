@@ -130,7 +130,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "C:\\Users\\Kévin\\epitech\\mon_site\\threads-clone\\prisma\\generated\\client",
+      "value": "/mnt/c/Users/Kévin/epitech/mon_site/threads-clone/prisma/generated/client",
       "fromEnvVar": null
     },
     "config": {
@@ -139,7 +139,7 @@ const config = {
     "binaryTargets": [
       {
         "fromEnvVar": null,
-        "value": "windows",
+        "value": "debian-openssl-3.0.x",
         "native": true
       }
     ],
