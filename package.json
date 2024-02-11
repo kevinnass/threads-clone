@@ -3,11 +3,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "nuxt build",
+    "build": "nuxt build && npx prisma generate",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare && prisma generate && prisma db push"
+    "postinstall": "nuxt prepare && prisma generate"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
